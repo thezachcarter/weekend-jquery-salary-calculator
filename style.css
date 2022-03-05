@@ -1,3 +1,46 @@
-table {
-    border: black solid 1px;
+.container {
+    background-color:#adb5bd;
 }
+
+table {
+    background-color: #fff;
+}
+
+td {
+    width: 16.6%;
+}
+
+header {
+    margin-right: 0px;
+    text-align: center;
+    background-color: #0d6efd;
+    color: #fff;
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+}
+
+h3 {
+    margin-top: 2em;
+}
+
+input, #submitBtn {
+    width: 16.66%;
+}
+
+
+.footerText {
+    padding: 0.25em;
+    background-color: #0d6efd;
+    color: #fff;
+    text-align: right;
+}
+
+.redFooter {
+    background-color: #dc3545;
+}
+
+/* #submitBtn {
+    margin-right: 24em;
+    margin-left: auto;
+    display: block;
+} */

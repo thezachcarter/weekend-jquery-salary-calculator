@@ -6,72 +6,53 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="jquery-3.6.0.min.js"></script>
     <script src="client.js"></script>
+    <link rel="stylesheet" href="bootstrap.css">
     <link rel="stylesheet" href="style.css">
 
-    <title>Document</title>
+    <title>Salary Calculator</title>
 </head>
 <body>
+     
+    <div class="container">
+
+        <header>
+            <h1>Salary Calculator</h1>
+        </header>
+
+        <h3>Add Employee</h3>
+
+        <h6>fields marked with * are required</h6>
+
+        <div class="input-group mb-3 inputs">
+            <input type="text" placeholder="First Name*" id="firstName">
+            <input type="text" placeholder="Last Name*" id="lastName">
+            <input type="number" placeholder="ID" id="ID">
+            <input type="text" placeholder="Title" id="title">
+            <input type="number" placeholder="Annual Salary*" id="annualSalary">
+            <button class="btn btn-primary" id="submitBtn">Submit</button>
+        </div>
+
+        <h3>Employees</h3>
+
+        <table class="table">
+            <thead>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>ID</th>
+                <th>Title</th>
+                <th>Annual Salary</th>
+                <th></th>
+            </thead>
+            <tbody id="tbody">
+            </tbody>
+
+        </table>
+
+        <footer>
+            <h3 class="footerText">Total Monthly Salary: <span id="totalSalary"></span></h3>
+        </footer>
     
-    <header>
-        <h1>Salary Calculator</h1>
-    </header>
-
-    <h3>Add Employee</h3>
-
-    <div>
-        <input type="text" placeholder="First Name" id="firstName">
-        <input type="text" placeholder="Last Name" id="lastName">
-        <input type="text" placeholder="ID" id="ID">
-        <input type="text" placeholder="Title" id="title">
-        <input type="text" placeholder="Annual Salary" id="annualSalary">
     </div>
-
-    <div>
-        <button id="submitBtn">Submit</button>
-    </div>  
-
-    <h3>Employees</h3>
-
-    <table class="table1">
-        <thead>
-            <th>First Name</th>
-            <th>Last Name</th>
-            <th>ID</th>
-            <th>Title</th>
-            <th>Annual Salary</th>
-            <th></th>
-        </thead>
-        <tbody>
-            <tr>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td><button>Delete</button></td>
-            </tr>
-            <tr>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td><button>Delete</button></td>
-            </tr>
-            <tr>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td><button>Delete</button></td>
-            </tr>
-            <tr>
-                <td></td>
-            </tr>
-        </tbody>
-    </table>
-
 
 </body>
 </html>
