@@ -27,6 +27,11 @@ function addEmployee() {
         title: $('#title').val(),
         annualSalary: $('#annualSalary').val()
     } //end employeeObject
+
+    //variable with comma divided salary 
+    let salNumber = Number(employee.annualSalary).toLocaleString();
+    console.log(salNumber);
+
     employeeArray.push(employee);
     $('#tbody').prepend(`           
         <tr data-sal="${employee.annualSalary}">
@@ -34,7 +39,7 @@ function addEmployee() {
             <td>${employee.lastName}</td>
             <td>${employee.ID}</td>
             <td>${employee.title}</td>
-            <td class="salary">$${employee.annualSalary}</td>
+            <td class="salary">$${salNumber}</td>
             <td><button class="deleteBtn btn btn-secondary">Delete</button></td>
         </tr>`)
     console.log(employee);
@@ -57,7 +62,7 @@ function sumSalary(employee) {
     totalSalary += Math.round(Number(employee.annualSalary) / 12);
     console.log(totalSalary);
     $('#totalSalary').text('');
-    $('#totalSalary').text(`$${totalSalary}`);
+    $('#totalSalary').text('$' + totalSalary.toLocaleString());
     if (totalSalary > 20000) {
         $('.footerText').addClass('redFooter');
         alert('You have exceeded the monthly salary budget.')
