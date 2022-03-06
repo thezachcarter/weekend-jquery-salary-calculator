@@ -76,7 +76,7 @@ function removeEmployee() {
     totalSalary -= Math.round(subSalary / 12);
     console.log('Subtracted Salary: ', subSalary);
     $('#totalSalary').text('');
-    $('#totalSalary').text(`$${totalSalary}`);
+    $('#totalSalary').text('$' + totalSalary.toLocaleString());
     console.log(totalSalary);
     $(this).closest('tr').remove();
     if (totalSalary <= 20000) {
